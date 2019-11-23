@@ -34,3 +34,5 @@ Afterwars you can include ImageManipulation as a dependency in your maven projec
 
 ## Todos
 This library is still in development. Don´t use it in production mode without testing everything by yourself.
+
+.
