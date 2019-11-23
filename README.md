@@ -1,20 +1,7 @@
-# FileStorage
-[![Build Status](https://travis-ci.org/MallorcaSoftware/FileStorage.svg?branch=develop)](https://travis-ci.org/MallorcaSoftware/FileStorage)
+# FileMonster
+[![Build Status](https://travis-ci.org/wildlabsio/filemonster.svg?branch=master)](https://travis-ci.org/wildlabsio/filemonster)
 
 This library provides an abstract file system. Inspired by https://github.com/KnpLabs/Gaufrette
-
-## Changelog
-All changes to this project will be documented in this file.
-
-### [1.2.0] - [not released]
-
-### [1.1.0] - 19.09.2019
-* Added getKeys to Filesystem
-* Added tests for Filesystem
-* Added documentation for Filesystem
-
-### [1.0.0] - 29.01.2018
-* Initial project
  
 ## Adapter
 
@@ -39,9 +26,9 @@ Afterwars you can include ImageManipulation as a dependency in your maven projec
 
 ```shell
 <dependency>
-    <groupId>com.mallorcasoftware</groupId>
-    <artifactId>filestorage</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <groupId>io.wildlabs</groupId>
+    <artifactId>filemonster</artifactId>
+    <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
 
