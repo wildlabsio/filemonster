@@ -5,12 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.wildlabs</groupId>
-    <artifactId>filemonster</artifactId>
+    <artifactId>filemonster-storage-local</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.4</version>
-    <modules>
-        <module>filemonster-core</module>
-    </modules>
+    <version>0.0.1-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>1.6</maven.compiler.source>
@@ -29,6 +26,12 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>1.10.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.wildlabs</groupId>
+            <artifactId>filemonster-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

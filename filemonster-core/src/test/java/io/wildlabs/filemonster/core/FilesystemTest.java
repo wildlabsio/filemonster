@@ -1,6 +1,6 @@
 package io.wildlabs.filemonster.core;
 
-import io.wildlabs.filemonster.core.adapter.Adapter;
+import io.wildlabs.filemonster.core.storage.Storage;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -18,7 +18,7 @@ import static org.mockito.Mockito.*;
 
 public class FilesystemTest {
     @Mock
-    private Adapter adapter;
+    private Storage storage;
 
     @InjectMocks
     private Filesystem testee;
@@ -34,14 +34,14 @@ public class FilesystemTest {
         String checkFileName = "testFile";
         boolean expectedResult = false;
 
-        when(adapter.exists(checkFileName)).thenReturn(expectedResult);
+        when(storage.exists(checkFileName)).thenReturn(expectedResult);
 
         // when
         boolean fileExist = testee.has(checkFileName);
 
         // then
         assertFalse(fileExist);
-        verify(adapter, times(1)).exists(checkFileName);
+        verify(storage, times(1)).exists(checkFileName);
     }
 
     @Test
@@ -50,13 +50,13 @@ public class FilesystemTest {
         String fileName = "testFile";
         InputStream expectedInputStream = Mockito.mock(InputStream.class);
 
-        when(adapter.read(fileName)).thenReturn(expectedInputStream);
+        when(storage.read(fileName)).thenReturn(expectedInputStream);
 
         // when
         testee.read(fileName);
 
         // then
-        verify(adapter, times(1)).read(fileName);
+        verify(storage, times(1)).read(fileName);
     }
 
     @Test
@@ -65,14 +65,14 @@ public class FilesystemTest {
         String sourceKey = "testSourceKey";
         String targetKey = "testTargetKey";
 
-        when(adapter.exists(sourceKey)).thenReturn(true);
+        when(storage.exists(sourceKey)).thenReturn(true);
 
         // when
         testee.rename(sourceKey, targetKey);
 
         // then
-        verify(adapter).exists(sourceKey);
-        verify(adapter).rename(sourceKey, targetKey);
+        verify(storage).exists(sourceKey);
+        verify(storage).rename(sourceKey, targetKey);
     }
 
     @Test(expected = FileNotFoundException.class)
@@ -81,13 +81,13 @@ public class FilesystemTest {
         String sourceKey = "testSourceKey";
         String targetKey = "testTargetKey";
 
-        when(adapter.exists(sourceKey)).thenReturn(false);
+        when(storage.exists(sourceKey)).thenReturn(false);
 
         // when
         testee.rename(sourceKey, targetKey);
 
         // then
-        verify(adapter).exists(sourceKey);
+        verify(storage).exists(sourceKey);
     }
 
     @Test
@@ -100,47 +100,47 @@ public class FilesystemTest {
         testee.write(expectedKey, expectedInputStream);
 
         // then
-        verify(adapter).write(expectedKey, expectedInputStream);
+        verify(storage).write(expectedKey, expectedInputStream);
     }
 
     @Test
     public void thatDeleteWorks() throws FileNotFoundException {
         // given
         String key = "testSourceKey";
-        when(adapter.exists(key)).thenReturn(true);
+        when(storage.exists(key)).thenReturn(true);
 
         // when
         testee.delete(key);
 
         // then
-        verify(adapter).exists(key);
-        verify(adapter).delete(key);
+        verify(storage).exists(key);
+        verify(storage).delete(key);
     }
 
     @Test(expected = FileNotFoundException.class)
     public void thatDeleteThrowsExceptionIfKeyDoesNotExist() throws FileNotFoundException {
         // given
         String key = "testSourceKey";
-        when(adapter.exists(key)).thenReturn(false);
+        when(storage.exists(key)).thenReturn(false);
 
         // when
         testee.delete(key);
 
         // then
-        verify(adapter).exists(key);
+        verify(storage).exists(key);
     }
 
     @Test
     public void thatGetKeysWorks() {
         // given
         List<String> expectedKeys = Collections.singletonList("expectedKey");
-        when(adapter.getKeys()).thenReturn(expectedKeys);
+        when(storage.getKeys()).thenReturn(expectedKeys);
 
         // when
         List<String> keys = testee.getKeys();
 
         // then
         assertEquals(expectedKeys, keys);
-        verify(adapter).getKeys();
+        verify(storage).getKeys();
     }
 }

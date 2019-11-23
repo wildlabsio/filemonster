@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.wildlabs</groupId>
-    <artifactId>filemonster-core</artifactId>
+    <artifactId>filemonster-storage-dropbox</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -26,6 +26,18 @@
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>1.10.19</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.wildlabs</groupId>
+            <artifactId>filemonster-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dropbox.core</groupId>
+            <artifactId>dropbox-core-sdk</artifactId>
+            <version>3.0.3</version>
         </dependency>
     </dependencies>
 
