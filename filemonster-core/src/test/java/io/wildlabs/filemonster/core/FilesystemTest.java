@@ -1,6 +1,6 @@
-package io.wildlabs.filemonster;
+package io.wildlabs.filemonster.core;
 
-import io.wildlabs.filemonster.adapter.Adapter;
+import io.wildlabs.filemonster.core.adapter.Adapter;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;

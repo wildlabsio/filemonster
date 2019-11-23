@@ -1,5 +1,5 @@
 # FileMonster
-[![Build Status](https://travis-ci.org/wildlabsio/filemonster.svg?branch=master)](https://travis-ci.org/wildlabsio/filemonster)
+[![Build Status](https://github.com/wildlabsio/filemonster/workflows/Java%20CI/badge.svg)](https://github.com/wildlabsio/filemonster)
 
 FileMonster provides a abstract file system. Heavily inspired by https://github.com/KnpLabs/Gaufrette
  

@@ -1,4 +1,4 @@
-package io.wildlabs.filemonster.adapter;
+package io.wildlabs.filemonster.core.adapter;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
