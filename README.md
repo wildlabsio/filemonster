@@ -12,7 +12,7 @@ All adapters are seperated projects to reduce dependencies and complexity.
 * **Local** https://github.com/MallorcaSoftware/FileStorageLocal
 * **Chain** https://github.com/MallorcaSoftware/FileStorageChain
 
-Feel free to implement own adapter. You only have to implement the Adapter interface.
+Feel free to implement own storage. You only have to implement the Adapter interface.
 
 ## Installation
 

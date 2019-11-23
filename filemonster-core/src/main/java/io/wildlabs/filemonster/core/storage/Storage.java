@@ -1,21 +1,19 @@
-package io.wildlabs.filemonster.core.adapter;
+package io.wildlabs.filemonster.core.storage;
 
 import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.List;
 
 /**
  * Represents the filesystem implementation
  */
-public interface Adapter {
+public interface Storage {
     /**
      * Reads the content from the file.
      *
      * @param key key of the file
-     * @return InputStream of the given file
+     * @return byte[] of the given file
      * @throws FileNotFoundException if file does not exist
      */
-    InputStream read(String key) throws FileNotFoundException;
+    byte[] read(String key) throws FileNotFoundException;
 
     /**
      * Writes the given content into the file.
@@ -23,7 +21,7 @@ public interface Adapter {
      * @param key     key of the file
      * @param content content of the file
      */
-    void write(String key, InputStream content);
+    void write(String key, byte[] content);
 
     /**
      * Indicates whether the file matching the specified key exists.
@@ -49,12 +47,5 @@ public interface Adapter {
      * @throws FileNotFoundException if sourceKey does not exist
      */
     void rename(String sourceKey, String targetKey) throws FileNotFoundException;
-
-    /**
-     * Returns all keys
-     *
-     * @return list of keys
-     */
-    List<String> getKeys();
 }
 
