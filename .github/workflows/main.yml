@@ -1,0 +1,5 @@
+- name: Github Release
+  uses: elgohr/Github-Release-Action@3.0
+  with:
+    # The name of the release to publish
+    release: 
