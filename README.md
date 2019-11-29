@@ -7,20 +7,15 @@ FileMonster provides a abstract file system. Heavily inspired by https://github.
 
 The following storages are implemented right now.
 
-* **AWS S3**
- 
+### **AWS S3**
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-aws-s3
-* **Wasabi** 
-
+### **Wasabi** 
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-wasabi
-* **GridFS**
- 
+### **GridFS**
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-gridfs
-* **Dropbox**
- 
+### **Dropbox**
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-dropbox
-* **Local**
- 
+### **Local**
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-local
 
 Feel free to implement your own storage. You only have to implement the Storage interface. FileMonster also provides a

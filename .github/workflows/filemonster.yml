@@ -1,4 +1,4 @@
-name: filemonster-core
+name: filemonster
 
 on: [push]
 
