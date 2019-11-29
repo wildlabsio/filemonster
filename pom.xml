@@ -33,6 +33,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <dropbox-core-sdk.version>3.0.3</dropbox-core-sdk.version>
         <mongo-java-driver.version>2.10.1</mongo-java-driver.version>
+        <aws-java-sdk-s3.version>1.11.642</aws-java-sdk-s3.version>
     </properties>
 
     <dependencyManagement>

@@ -1,6 +1,6 @@
 # FileMonster Local Storage
 
-Storage for FileMonster to save and get files in local filesystem.
+Storage for FileMonster to save and get files in local filesystemImpl.
 
 ## License
 

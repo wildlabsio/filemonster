@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.io.FileNotFoundException;
@@ -13,12 +12,12 @@ import java.io.FileNotFoundException;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
-public class FilesystemTest {
+public class FilesystemImplTest {
     @Mock
     private Storage storage;
 
     @InjectMocks
-    private Filesystem testee;
+    private FilesystemImpl testee;
 
     @Before
     public void initMocks() {
