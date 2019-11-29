@@ -17,10 +17,10 @@
     </modules>
 
     <scm>
-        <connection>scm:git:ssh://git@github.com:wildlabsio/filemonster.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:wildlabsio/filemonster.git
-        </developerConnection>
-        <url>https://github.com/wildlabsio/filemonster.git</url>
+        <connection>scm:git:https://github.com/wildlabsio/filemonster.git</connection>
+        <developerConnection>scm:git:git@github.com:wildlabsio/filemonster.git</developerConnection>
+        <url>https://github.com/wildlabsio/filemonster</url>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
@@ -83,6 +83,9 @@
                             <version>1.9.4</version>
                         </dependency>
                     </dependencies>
+                    <configuration>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
