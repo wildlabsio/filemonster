@@ -3,7 +3,6 @@ package io.wildlabs.filemonster.core;
 import io.wildlabs.filemonster.core.storage.Storage;
 
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 
 public class Filesystem {
     private Storage storage;

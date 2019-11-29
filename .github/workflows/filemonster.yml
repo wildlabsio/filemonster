@@ -14,4 +14,4 @@ jobs:
         with:
           java-version: 1.8
       - name: Build
-        run: mvn -B package --file filemonster-core/pom.xml
+        run: mvn -b package
