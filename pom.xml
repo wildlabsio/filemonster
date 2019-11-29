@@ -4,7 +4,7 @@
 
     <groupId>io.wildlabs</groupId>
     <artifactId>filemonster</artifactId>
-    <version>0.1.1-SNAPSHOT</version>
+    <version>0.1.1</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -19,7 +19,7 @@
         <connection>scm:git:https://github.com/wildlabsio/filemonster.git</connection>
         <developerConnection>scm:git:git@github.com:wildlabsio/filemonster.git</developerConnection>
         <url>https://github.com/wildlabsio/filemonster</url>
-        <tag>HEAD</tag>
+        <tag>filemonster-0.1.1</tag>
     </scm>
 
     <properties>
