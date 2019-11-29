@@ -1,5 +1,5 @@
 # FileMonster
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster-core/badge.svg)](https://github.com/wildlabsio/filemonster)
+[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster/badge.svg)](https://github.com/wildlabsio/filemonster)
 
 FileMonster provides a abstract file system. Heavily inspired by https://github.com/KnpLabs/Gaufrette
  
@@ -8,24 +8,19 @@ FileMonster provides a abstract file system. Heavily inspired by https://github.
 The following storages are implemented right now.
 
 * **AWS S3**
-
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster-storage-aws-s3/badge.svg)](https://github.com/wildlabsio/filemonster) 
+ 
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-aws-s3
 * **Wasabi** 
 
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster-storage-wasabi/badge.svg)](https://github.com/wildlabsio/filemonster)
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-wasabi
 * **GridFS**
-
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster-storage-gridfs/badge.svg)](https://github.com/wildlabsio/filemonster) 
+ 
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-gridfs
 * **Dropbox**
  
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster-storage-dropbox/badge.svg)](https://github.com/wildlabsio/filemonster)
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-dropbox
 * **Local**
-
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster-storage-local/badge.svg)](https://github.com/wildlabsio/filemonster) 
+ 
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-local
 
 Feel free to implement your own storage. You only have to implement the Storage interface. FileMonster also provides a
