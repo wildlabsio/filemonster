@@ -9,9 +9,6 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.util.Collections;
-import java.util.List;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -48,7 +45,7 @@ public class FilesystemTest {
     public void thatReadWorks() throws FileNotFoundException {
         // given
         String fileName = "testFile";
-        InputStream expectedInputStream = Mockito.mock(InputStream.class);
+        byte[] expectedInputStream = Mockito.mock(byte[].class);
 
         when(storage.read(fileName)).thenReturn(expectedInputStream);
 
@@ -94,7 +91,7 @@ public class FilesystemTest {
     public void thatWriteWorks() {
         // given
         String expectedKey = "testKey";
-        InputStream expectedInputStream = Mockito.mock(InputStream.class);
+        byte[] expectedInputStream = Mockito.mock(byte[].class);
 
         // when
         testee.write(expectedKey, expectedInputStream);
@@ -128,19 +125,5 @@ public class FilesystemTest {
 
         // then
         verify(storage).exists(key);
-    }
-
-    @Test
-    public void thatGetKeysWorks() {
-        // given
-        List<String> expectedKeys = Collections.singletonList("expectedKey");
-        when(storage.getKeys()).thenReturn(expectedKeys);
-
-        // when
-        List<String> keys = testee.getKeys();
-
-        // then
-        assertEquals(expectedKeys, keys);
-        verify(storage).getKeys();
     }
 }

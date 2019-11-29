@@ -1,36 +1,29 @@
 # FileMonster
-[![Build Status](https://github.com/wildlabsio/filemonster/workflows/Java%20CI/badge.svg)](https://github.com/wildlabsio/filemonster)
+[![Build Status](https://github.com/wildlabsio/filemonster/workflows/Build/badge.svg)](https://github.com
+/wildlabsio/filemonster)
 
 FileMonster provides a abstract file system. Heavily inspired by https://github.com/KnpLabs/Gaufrette
  
-## Adapter
+## Storages
 
-All adapters are seperated projects to reduce dependencies and complexity.
+The following storages are implemented right now.
 
-* **GridFS** https://github.com/MallorcaSoftware/FileStorageGridFS
-* **Dropbox** https://github.com/MallorcaSoftware/FileStorageDropbox
-* **Local** https://github.com/MallorcaSoftware/FileStorageLocal
-* **Chain** https://github.com/MallorcaSoftware/FileStorageChain
+* **AWS S3** https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-aws-s3
+* **Wasabi** https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-wasabi
+* **GridFS** https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-gridfs
+* **Dropbox** https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-dropbox
+* **Local** https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-local
 
-Feel free to implement own storage. You only have to implement the Adapter interface.
+Feel free to implement your own storage. You only have to implement the Storage interface. FileMonster also provides a
+ ChainStorage to combine multiple storages.
 
 ## Installation
 
-This library isn´t available in any repositories yet. You have to install it to your Maven repository. You have to clone the project and simply execute:
+Provide some installation instruction.
 
-```shell
-mvn clean install
-```
+## Usage
 
-Afterwars you can include ImageManipulation as a dependency in your maven project
-
-```shell
-<dependency>
-    <groupId>io.wildlabs</groupId>
-    <artifactId>filemonster</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
-```
+Provide some usage instructions.
 
 ## Todos
 This library is still in development. Don´t use it in production mode without testing everything by yourself.
