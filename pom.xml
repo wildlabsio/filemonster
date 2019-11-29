@@ -13,7 +13,6 @@
         <module>filemonster-storage-aws-s3</module>
         <module>filemonster-storage-dropbox</module>
         <module>filemonster-storage-gridfs</module>
-        <module>filemonster-storage-wasabi</module>
         <module>filemonster-storage-local</module>
     </modules>
 
@@ -56,7 +55,6 @@
     </dependencyManagement>
 
     <build>
-        <defaultGoal>install</defaultGoal>
         <pluginManagement>
             <plugins>
                 <plugin>
