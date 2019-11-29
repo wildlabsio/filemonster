@@ -58,18 +58,6 @@
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                    <configuration>
-                        <forceJavacCompilerUse>true</forceJavacCompilerUse>
-                        <release>${java.version}</release>
-                        <encoding>${compiler.encoding}</encoding>
-                        <generatedSourcesDirectory>target/generated</generatedSourcesDirectory>
-                        <generatedTestSourcesDirectory>target/generated_tests</generatedTestSourcesDirectory>
-                    </configuration>
-                </plugin>
-                <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>3.0.0</version>
