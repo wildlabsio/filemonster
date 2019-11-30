@@ -1,42 +1,15 @@
 package io.wildlabs.filemonster.core;
 
-import io.wildlabs.filemonster.core.storage.Storage;
-
 import java.io.FileNotFoundException;
-import java.io.InputStream;
 
-public class Filesystem {
-    private Storage storage;
+public interface Filesystem {
+    boolean has(String key);
 
-    public Filesystem(Storage storage) {
-        this.storage = storage;
-    }
+    void rename(String sourceKey, String targetKey) throws FileNotFoundException;
 
-    public boolean has(String key) {
-        return storage.exists(key);
-    }
+    byte[] read(String key) throws FileNotFoundException;
 
-    public void rename(String sourceKey, String targetKey) throws FileNotFoundException {
-        if (!has(sourceKey)) {
-            throw new FileNotFoundException();
-        }
+    void write(String key, byte[] content);
 
-        storage.rename(sourceKey, targetKey);
-    }
-
-    public byte[] read(String key) throws FileNotFoundException {
-        return storage.read(key);
-    }
-
-    public void write(String key, byte[] content) {
-        storage.write(key, content);
-    }
-
-    public void delete(String key) throws FileNotFoundException {
-        if (!has(key)) {
-            throw new FileNotFoundException();
-        }
-
-        storage.delete(key);
-    }
+    void delete(String key) throws FileNotFoundException;
 }
