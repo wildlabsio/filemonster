@@ -1,16 +1,16 @@
 # FileMonster
 [![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster/badge.svg)](https://github.com/wildlabsio/filemonster)
 
-FileMonster provides a abstract file system. Heavily inspired by https://github.com/KnpLabs/Gaufrette
+FileMonster provides an abstract filesystem layer. 
  
 ## Storages
 
-The following storages are implemented right now.
+The following storage's are implemented right now.
 
-### **AWS S3**
+### **Amazon S3**
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-aws-s3
 ### **Wasabi** 
-https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-wasabi
+https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-aws-s3
 ### **GridFS**
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-gridfs
 ### **Dropbox**
@@ -19,18 +19,30 @@ https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-dropbo
 https://github.com/wildlabsio/filemonster/tree/master/filemonster-storage-local
 
 Feel free to implement your own storage. You only have to implement the Storage interface. FileMonster also provides a
- ChainStorage to combine multiple storages.
+ ChainStorage to combine multiple storage's.
 
 ## Installation
 
-Provide some installation instruction.
+The FileMonster artifacts are stored on github. Look into https://github.com/wildlabsio/filemonster/packages to get a
+ list of current artifacts.
 
 ## Usage
 
-Provide some usage instructions.
+To start you have to create a Storage of your choice.
 
-## Todos
-This library is still in development. Don´t use it in production mode without testing everything by yourself.
+```java
+// build your amazon s3 client based on your properties
+AmazonS3 amazonS3 = AmazonS3ClientBuilder.defaultClient();
+
+// create an AwsS3Storage with your generated AmazonS3 client
+Storage storage = new AwsS3Storage(amazonS3, "your-bucket-name");
+
+// create a Filesystem with your configured Storage
+Filesystem filesystem = new FilesystemImpl(storage);
+
+// start to use your configured Filesystem
+filesystem.read("some-key");
+```
 
 ## License
 
