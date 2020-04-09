@@ -13,6 +13,7 @@
         <module>filemonster-storage-dropbox</module>
         <module>filemonster-storage-gridfs</module>
         <module>filemonster-storage-local</module>
+        <module>filemonster-attachable</module>
     </modules>
 
     <scm>
@@ -106,10 +107,13 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>wildlabsio</name>
-            <url>https://maven.pkg.github.com/wildlabsio/filemonster</url>
+            <id>releases-eagle</id>
+            <url>https://eagle.mediamarketing24.com/nexus/content/repositories/releases</url>
         </repository>
+        <snapshotRepository>
+            <id>snapshots-eagle</id>
+            <url>https://eagle.mediamarketing24.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
     </distributionManagement>
 
 </project>
