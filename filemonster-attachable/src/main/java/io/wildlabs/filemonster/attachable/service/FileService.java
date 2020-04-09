@@ -10,6 +10,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Optional;
 
 public class FileService<T extends File> {
     private final FileDao<T> fileDao;
@@ -29,12 +30,12 @@ public class FileService<T extends File> {
         this.filesystem = filesystem;
     }
 
-    public T getFile(FileAttachable fileAttachable, String type) {
+    public Optional<T> getFile(FileAttachable fileAttachable, String type) {
         return fileDao.findTopByClassIdentifierAndReferenceIdAndType(
                 fileAttachable.getClassIdentifier(),
                 fileAttachable.getReferenceId(),
                 type
-        ).orElse(null);
+        );
     }
 
     public List<T> getFiles(FileAttachable fileAttachable, String type) {
@@ -54,12 +55,9 @@ public class FileService<T extends File> {
         }
     }
 
-    public void deleteFiles(FileAttachable fileAttachable, String type) {
-        getFiles(fileAttachable, type).forEach(this::deleteFile);
-    }
-
     public T setFile(FileAttachable fileAttachable, String type, InputStream inputStream) throws IOException {
-        deleteFiles(fileAttachable, type);
+        Optional<T> existingFile = getFile(fileAttachable, type);
+        existingFile.ifPresent(this::deleteFile);
 
         return storeFile(fileAttachable, type, inputStream);
     }
