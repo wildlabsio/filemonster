@@ -1,7 +1,7 @@
 # FileMonster
 [![Build Status](https://github.com/wildlabsio/filemonster/workflows/filemonster/badge.svg)](https://github.com/wildlabsio/filemonster)
 
-FileMonster provides an abstract filesystem layer. 
+FileMonster provides an abstract filesystem layer.
  
 ## Storages
 
@@ -43,6 +43,29 @@ Filesystem filesystem = new FilesystemImpl(storage);
 // start to use your configured Filesystem
 filesystem.read("some-key");
 ```
+
+## Attachable
+
+FileMonster provides a modules to attach File to a FileAttachable. 
+
+### Maven dependency
+```java
+<dependency>
+    <groupId>io.wildlabs</groupId>
+    <artifactId>filemonster-attachable</artifactId>
+    <version>${filemonster-attachable.version}</version>
+</dependency>
+```
+
+### Entity
+Create an Entity which implements File interface. This entity will represent the attached file in your database.
+#### FileFactory
+Implement a FileFactory which will create an instance of your File.
+#### Dao
+Implement a FileDao which implements FileDao interface.
+
+### Service
+Use FileService to handle File attachment.
 
 ## License
 
