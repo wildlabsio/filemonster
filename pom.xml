@@ -108,11 +108,11 @@
     <distributionManagement>
         <repository>
             <id>releases-eagle</id>
-            <url>https://eagle.mediamarketing24.com/nexus/content/repositories/releases</url>
+            <url>https://eagle.rock37.com/nexus/repository/maven-releases</url>
         </repository>
         <snapshotRepository>
             <id>snapshots-eagle</id>
-            <url>https://eagle.mediamarketing24.com/nexus/content/repositories/snapshots</url>
+            <url>https://eagle.rock37.com/nexus/repository/maven-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
