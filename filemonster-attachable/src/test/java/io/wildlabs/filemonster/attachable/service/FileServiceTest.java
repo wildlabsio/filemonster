@@ -2,7 +2,6 @@ package io.wildlabs.filemonster.attachable.service;
 
 import io.wildlabs.filemonster.attachable.dao.FileDao;
 import io.wildlabs.filemonster.attachable.model.AbstractFile;
-import io.wildlabs.filemonster.attachable.model.File;
 import io.wildlabs.filemonster.attachable.model.FileAttachable;
 import io.wildlabs.filemonster.attachable.service.key.FileKeyGenerator;
 import io.wildlabs.filemonster.core.Filesystem;
